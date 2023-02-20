@@ -2,18 +2,41 @@
 .header{
     position: sticky;
     top: 0;
+    
     min-height: 80px;
     margin: 0 auto;
     display: flex;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #dc143c;
+    animation: border-glow 4s infinite linear;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
     background-color: #141124;
 }
 
+@keyframes border-glow {
+	0% {
+        box-shadow: 5px 5px 10px 2px #dc143c;
+	}
+    50% {
+        box-shadow: 5px 5px 5px 2px rgb(255, 132, 0);
+    }
+
+    75% {
+        box-shadow: 5px 5px 10px 2px rgba(255, 132, 0, 0.585);
+    }
+
+    100% {
+        box-shadow: 5px 5px 5px 3px #dc143c;
+    }
+
+}
+
+
 h2 {
     margin-left: 10px;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 /* .navigation{
@@ -21,8 +44,11 @@ h2 {
     align-items: center;
     justify-content: space-between;
 } */
-
+li {
+    list-style: none;
+}
 .signUp {
+    margin-top: 14px;
     color:#f5b70a;
     display: flex;
     list-style: none;
@@ -40,6 +66,7 @@ h2 {
 
 .header-links {
     display: flex;
+    list-style: none;
 }
 
 .header-links ul li {
@@ -67,6 +94,7 @@ h2 {
 
 .cart i {
     font-size: 20px;
+    position: relative;
 }
 
 .cart-length {
@@ -79,7 +107,7 @@ h2 {
 }
 
 
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 1010px) and (min-width: 450px) {
 
     .logo span {
         display: none;
@@ -88,10 +116,67 @@ h2 {
         display: none !important;
     }
 
+    h2 {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .signUp {
+        font-size: 8px;
+    }
+
 
     .cart i {
         font-size: 20px;
-        margin-right: 150px;
+        margin-right: 50px;
+    }
+    .cart-length {
+        margin: 3px;
+        font-size: 14px;
+        font-weight: 700;
+        vertical-align: super;
+        position: relative;
+        right: 50px;
+        color: red;
+    
     }
 
 } 
+
+@media only screen and (max-width: 450px) {
+    .logo span {
+        display: none;
+    }
+    .header-link-mobile {
+        display: none !important;
+    }
+
+    h2 {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .signUp {
+        font-size: 8px;
+    }
+
+
+    .cart i {
+        font-size: 20px;
+        position: relative;
+        right: 50px;
+        margin-right: 50px;
+    }
+
+    .cart-length {
+        margin: 3px;
+        font-size: 14px;
+        position: relative;
+        right: 100px;
+        font-weight: 700;
+        vertical-align: super;
+        color: red;
+    
+    }
+
+}

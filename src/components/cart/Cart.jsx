@@ -54,14 +54,14 @@ const Cart = ({
                                 </button>
                         </div>
                         <div className="cart-items-price">
-                            ${item.price} * {item.quantity}
+                            ${item.price} x {item.quantity}
                         </div>
                     </div>
                 ))}
             </div>
 
             <div className="cart-items-total-price-name">
-                Total Price
+                Total Price:
                 <div className="cart-items-total-price"> ${totalPrice}</div>
             </div>
         </div>
