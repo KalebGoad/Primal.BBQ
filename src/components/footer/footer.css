@@ -1,0 +1,41 @@
+
+
+.footer{
+    padding-bottom: 0;
+}
+
+.footer__link-title {
+    color: #fff;
+}
+
+.link__item {
+    padding-left: 0;
+    background: transparent;
+    border: transparent;
+    color: #c4c4c4;
+
+}
+
+.link__item a {
+    color: #c4c4c4;
+    background: transparent;
+}
+
+.footer__bottom{
+    background: #141124;
+    padding: 30px 0px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer__bottom p{
+    font-size: .9rem;
+}
+
+.ri-facebook-circle-fill {
+    color: #4267B2;
+}
+
+.ri-instagram-line{
+    color: #E1306C;
+}

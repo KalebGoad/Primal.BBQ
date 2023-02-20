@@ -1,0 +1,41 @@
+
+
+.slider__wrapper img {
+    border-radius: 20px;
+    animation: border-spin 3s infinite linear;
+    padding: 10px;
+}
+
+@keyframes border-spin {
+	0% {
+        filter: drop-shadow(5px 5px 5px rgb(255, 132, 0));
+	}
+	50% {
+		
+		filter: drop-shadow(5px 5px 5px red); 
+	}
+    75% {
+        filter: drop-shadow(5px 5px 5px rgba(255, 0, 0, 0.384));
+    }
+    100% {
+        filter: drop-shadow(5px 5px 5px rgb(255, 132, 0));
+    }
+
+}
+
+
+
+.btn {
+    padding: 7px 25px;
+    border-radius: 5px;
+    background: #dc143c;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    color:#dc143c;
+    font-size: large;
+    background: lightcyan;
+}
