@@ -20,13 +20,15 @@ const MyProducts = ({ productItems, handleAddProduct }) => {
                         <div> 
                             <h3 className="product-name">{productItem.name}</h3>
                         </div>
-                        <div className="product-price"> ${productItem.price}
+                        <div 
+                            className="product-price"> ${productItem.price}
+                        </div>
+                        <div 
+                            className="product-descr"> {productItem.desc}
                         </div>
                         <div>
                             <button className="product-add-button" onClick={() =>handleAddProduct(productItem)}>Add To Cart
                             </button>
-                            {/* <button className="product-remove-button" onClick={() =>handleRemoveProduct(productItem)}>Remove
-                            </button> */}
                         </div>
                     </div>
                 )}

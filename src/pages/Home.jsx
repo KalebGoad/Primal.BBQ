@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import MyRoutes from '../components/Routes/Routes.jsx';
 import data from '../assets/data/data.js';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -18,35 +18,45 @@ const Home = () => {
     if(ProductExist) {
         setCartItems(cartItems.map((item) => item.id === product.id 
           ? {...ProductExist, quantity: ProductExist.quantity + 1}
-          : item)
-        );
+          : item));
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
       } else {
         setCartItems([...cartItems, {...product, quantity: 1}]);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
       };
     };
 
     const handleRemoveProduct = (product) => {
       const ProductExist = cartItems.find((item) => item.id === product.id);
-        if(ProductExist) {
-          setCartItems(cartItems.filter((item) => item.id !== product.id));
+        if(ProductExist.quantity === 1) {
+          setCartItems(cartItems.filter((item) => item.id !== product.id));   
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
         } else {
           setCartItems(
-            cartItems(
               cartItems.map((item) => 
               item.id === product.id 
-              ? { ...productItems, quantity: ProductExist.quantity - 1 }
-              :item)
-            )
+              ? { ...ProductExist, quantity: ProductExist.quantity - 1 }
+              : item
+              )
           );
-        }
-        // somthing is up with this remove product. It removes everything while the add function works normally. Need to find route cause. Looks like the wording is different, perhaps making it the same will fix.
-        
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
+        }
     };
 
     const handleCartClearance = () => {
       setCartItems([]);
-    }
+      localStorage.removeItem('cartItems', JSON.stringify(cartItems));
+    };
+
+    useEffect(() => {
+      setCartItems(
+        localStorage.getItem('cartItems')
+        ? JSON.parse(localStorage.getItem('cartItems'))
+        : []
+      );
+    }, []);
 
   return (
     <div>

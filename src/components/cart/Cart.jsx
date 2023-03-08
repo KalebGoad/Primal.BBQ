@@ -14,6 +14,8 @@ const Cart = ({
         0
     );
 
+    
+
     return (
         <div className="cart-items">
             <h2 className="cart-items-header">Cart Items</h2>
@@ -62,7 +64,8 @@ const Cart = ({
 
             <div className="cart-items-total-price-name">
                 Total Price:
-                <div className="cart-items-total-price"> ${totalPrice}</div>
+                <div className="cart-items-total-price"> ${totalPrice.toFixed(2)}</div>  
+                {/* Not complete, need to learn the math portion that allows for rounding to nearest hundreths (two decimal places). 0.00. */}
             </div>
         </div>
     );

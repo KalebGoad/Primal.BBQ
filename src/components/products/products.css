@@ -72,40 +72,44 @@
 .product-name {
     text-transform: uppercase;
     color: #dc143c;
-    margin: 10px 0px;
+    margin: 4px 0px;
     width: 100%;
 }
 
 .product-price {
     color: #fff;
-    margin: 10px 0px;
-    padding-bottom: 10px;
-    font-size: 18px;
+    margin: 6px 0px;
+    padding-bottom: 4px;
+    font-size: 24px;
     line-height: 30px;
 }
 
+.product-descr {
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
 .product-price span {
     color: #dc143c; 
     font-size: 1.3rem;
     font-weight: 500;
-
-
 }
 
 .product-add-button {
     font-weight: 700;
     font-size: 18px;
     border-radius: 5px;
+    /* vertical-align: bottom; this isn't working to fix button at the bottom, solve. */
     border: none;
     outline: none;
     background-color: black;
     color: white;
     width: 100%;
     height: 40px;
-    display: block;
+    /* display: block; */
     cursor: pointer;
     text-transform: uppercase;
-    margin: 15px auto;
+    margin: 12px auto;
 }
 
 .product-add-button:hover {
@@ -118,31 +122,7 @@
     transform: translateY(3px);
 }
 
-/* .product-remove-button {
-    font-weight: 700;
-    font-size: 18px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background-color: black;
-    color: white;
-    width: 100%;
-    height: 40px;
-    display: block;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin: 15px auto;
-}
 
-.product-remove-button:hover {
-    background-color: red;
-}
-
-
-
-.product-remove-button:active {
-    transform: translateY(3px);
-} */
 
 @keyframes animate {
     from {
