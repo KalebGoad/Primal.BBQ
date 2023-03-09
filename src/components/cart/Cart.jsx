@@ -9,6 +9,7 @@ const Cart = ({
     handleRemoveProduct,
     handleCartClearance
 }) => {
+    // const itemTotal = cartItems.map((item) => item.quantity * item.price);
     const totalPrice = cartItems.reduce(
         (price, item) => price + item.quantity * item.price,
         0
@@ -48,6 +49,9 @@ const Cart = ({
                                 >
                                     +
                                 </button>
+                                    <div className="item-quantity">
+                                        {item.quantity}
+                                    </div>
                                 <button
                                     className="cart-items-remove"
                                     onClick={() => handleRemoveProduct(item)}
@@ -55,10 +59,16 @@ const Cart = ({
                                     -
                                 </button>
                         </div>
-                        <div className="cart-items-price">
-                            ${item.price} x {item.quantity}
-                        </div>
+                        
+                            <div 
+                            className="cart-items-price">
+                            ${item.price}
+                            </div>
+                            {/* <div className="item-total">
+                            $ {itemTotal.toFixed(2)}
+                            </div> */}
                     </div>
+                    
                 ))}
             </div>
 

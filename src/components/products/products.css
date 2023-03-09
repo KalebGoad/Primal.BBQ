@@ -99,21 +99,29 @@
     font-weight: 700;
     font-size: 18px;
     border-radius: 5px;
+    position: absolute;
+    bottom: 0px;
+    align-items: center;
     /* vertical-align: bottom; this isn't working to fix button at the bottom, solve. */
     border: none;
     outline: none;
-    background-color: black;
+    
+    background-color: #ef0b0b8f;
+
     color: white;
-    width: 100%;
+    width: 80%;
     height: 40px;
     /* display: block; */
     cursor: pointer;
     text-transform: uppercase;
     margin: 12px auto;
+    margin-left: 18px;
+    
 }
 
 .product-add-button:hover {
-    background-color: rgb(247, 4, 4);
+    background-color: rgba(255, 132, 0, 0.7);
+    transform: scale(1.06);
 }
 
 

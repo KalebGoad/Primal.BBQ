@@ -6,7 +6,7 @@ import Header from '../components/header/Header';
 // import HeroSlider from '../components/hero-slider/HeroSlider';
 // import PopularMenu from '../components/popular-menu/PopularMenu';
 // import ChooseUs from '../components/choose-us/ChooseUs';
-// import Footer from '../components/footer/footer';
+import Footer from '../components/footer/footer';
 // import Cart from '../components/cart/Cart';
 
 const Home = () => {
@@ -69,6 +69,7 @@ const Home = () => {
               handleRemoveProduct={handleRemoveProduct}
               handleCartClearance={handleCartClearance}
           />
+          {/* <Footer /> */}
       </Router>
     </div>
   );

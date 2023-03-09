@@ -53,10 +53,6 @@ const Header = ({cartItems}) => {
                                 <span className="cart-length">
                                     {cartItems.length === 0 ? "" : cartItems.length}
                                 </span>
-                                                    {/* <i class="fas fa-shopping-cart" /> if this doesn't work, find another solution. */}
-                                    {/* <span className="cart-length">
-                                        {cartItems.length === 0 ? "" : cartItems.length}
-                                    </span> */}
                                 </Link>
                             </li>
                         </ul>

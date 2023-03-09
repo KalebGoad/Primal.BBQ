@@ -63,12 +63,24 @@
     cursor: pointer;
 }
 
+.item-quantity {
+    border: 2px solid black;
+    width: 30px;
+    text-align: center;
+    margin: 2px;
+    
+}
+
 .cart-items-add {
     background-color: green;
+    width: 30px;
+    margin: 2px;
 }
 
 .cart-items-remove {
     background-color: red;
+    width: 30px;
+    margin: 2px;
 }
 
 .cart-items-add:active {
@@ -81,6 +93,7 @@
 
 .cart-items-price {
     border: 2px solid black;
+    text-align: center;
 }
 
 .cart-items-price-name {
